@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint for Indian Coal Mines</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="logo.png" alt="MineCarbon Logo">
+                </div>
+                <!-- Title -->
+                <h1>MineCarbon</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="start.html" id="nav-home">Home</a></li>
+                    <li><a href="#About-us" id="nav-about">About Us</a></li>
+                    <li><a href="#carbon-calculator" id="nav-calculator">Carbon Calculator</a></li>
+                    <li><a href="#pathways" id="nav-pathways">Pathways to Neutrality</a></li>
+                    <li><a href="#how-it-works" id="nav-how-it-works">How It Works</a></li>
+                    <li><a href="login.html?redirect=start.html" id="nav-login">Login/Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slideshow">
+            <div class="slide" style="background-image: url('pic\ 1.jpg');"></div>
+            <div class="slide" style="background-image: url('pic\ 2.jpg');"></div>
+            <div class="slide" style="background-image: url('pic\ 3.jpg');"></div>
+        </div>
+        <div class="container hero-content">
+            <h1>"Quantify Your Carbon Footprint. Transition to a Sustainable Future"</h1>
+            <p>Empowering Indian coal mines to measure, manage, and mitigate their carbon emissions.</p>
+            <a href="#" class="btn-primary">Calculate Your Carbon Footprint</a>
+        </div>
+    </section>
+
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <h2>Carbon Footprint Calculator</h2>
+                <p>Measure your mine’s emissions with our easy-to-use calculator.</p>
+            </div>
+            <div class="feature">
+                <h2>Pathways to Carbon Neutrality</h2>
+                <p>Explore tailored solutions to reduce your carbon footprint.</p>
+            </div>
+            <div class="feature">
+                <h2>Insights & Resources</h2>
+                <p>Access tools, resources, and community knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">1. Input your mine's data</div>
+                <div class="step">2. Get a detailed carbon footprint analysis</div>
+                <div class="step">3. Explore tailored pathways to achieve carbon neutrality</div>
+            </div>
+        </div>
+    </section>
+   
+
+
+    <!-- About Us Section -->
+    <section class="about" id="About-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to helping Indian coal mines reduce their carbon footprint and achieve sustainability goals through innovative tools and resources.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us: info@minecarbon.com | +91-1234567890</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginLink = document.querySelector('a[href="login.html"]');
+            if (loginLink) {
+                loginLink.href = `login.html?redirect=${encodeURIComponent(window.location.pathname)}`;
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+    
+            function setActiveLink() {
+                let index = sections.length;
+    
+                while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    
+                navLinks.forEach((link) => link.classList.remove('active'));
+                if (navLinks[index]) navLinks[index].classList.add('active');
+            }
+    
+            window.addEventListener('scroll', setActiveLink);
+            setActiveLink(); // Set the active link on page load
+        });
+    </script>
+    
+    <styles>
+        html {
+            scroll-behavior: smooth;
+        }
+    <styles>
+</body>
+</html>
